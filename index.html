@@ -6,6 +6,7 @@
 <title>Nachiket Midha</title>
 
 <style>
+/* ===== BASE ===== */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -14,12 +15,25 @@ body {
   background: #ffffff;
 }
 
+/* ===== FADED BANNER ===== */
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 260px;
+  background:
+    linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
+    url("assets/banner.jpg") center/cover no-repeat;
+  z-index: -1;
+}
+
 /* ===== LAYOUT ===== */
 .wrapper {
   display: grid;
   grid-template-columns: 260px 1fr;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 220px auto 0 auto;
   padding: 40px 20px;
   gap: 50px;
 }
@@ -92,7 +106,7 @@ nav a.active {
 
 /* ===== CONTENT ===== */
 main {
-  max-width: 760px;
+  max-width: 780px;
 }
 
 section {
@@ -109,7 +123,8 @@ h2 {
 }
 
 h3 {
-  margin-bottom: 4px;
+  margin-top: 24px;
+  margin-bottom: 6px;
 }
 
 .meta {
@@ -119,7 +134,7 @@ h3 {
 }
 
 ul li {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 footer {
@@ -132,9 +147,11 @@ footer {
 
 <body>
 
+<div class="banner"></div>
+
 <div class="wrapper">
 
-  <!-- ===== SIDEBAR ===== -->
+  <!-- SIDEBAR -->
   <aside class="sidebar">
     <img src="assets/profile.jpg" alt="Nachiket Midha" class="avatar">
 
@@ -153,7 +170,7 @@ footer {
     </ul>
   </aside>
 
-  <!-- ===== MAIN ===== -->
+  <!-- MAIN -->
   <main>
 
     <nav>
@@ -166,7 +183,7 @@ footer {
 
     <!-- ABOUT -->
     <section id="about" class="active">
-      <h2>Welcome</h2>
+      <h2>About</h2>
       <p>
         I am a political science researcher working at the intersection of political
         methodology, emerging technologies, and public policy. My work focuses on
@@ -195,7 +212,8 @@ footer {
       <p class="meta">Co-Founder</p>
       <p>
         I co-founded the
-        <a href="https://www.politics.ox.ac.uk/oxford-computational-political-science-group" target="_blank">
+        <a href="https://www.politics.ox.ac.uk/oxford-computational-political-science-group"
+           target="_blank">
           Oxford Computational Political Science Group
         </a>,
         an Oxford-affiliated interdisciplinary research network focused on
@@ -239,83 +257,67 @@ footer {
         <li>Worked on supply chains, trade policy, AI, and Indo-Pacific geopolitics.</li>
       </ul>
     </section>
-  <!-- PUBLICATIONS -->
+
+    <!-- PUBLICATIONS -->
     <section id="publications">
-  <h2>Publications & Writing</h2>
+      <h2>Publications & Writing</h2>
 
-  <h3>Peer-Reviewed Research</h3>
-  <ul>
-    <li>
-      <em>Understanding Akhand Bharat in Terms of Ontological Security.</em><br>
-      <strong>Columbia Journal of Asia</strong>, Vol. 2, No. 1 (2023), pp. 15–24.  
-      <a href="https://doi.org/10.52214/cja.v2i1.11113" target="_blank">DOI</a> ·
-      <a href="https://journals.columbia.edu/index.php/cja/article/view/11113" target="_blank">
-        Journal page
-      </a>
-    </li>
-  </ul>
+      <h3>Peer-Reviewed Research</h3>
+      <ul>
+        <li>
+          <em>Understanding Akhand Bharat in Terms of Ontological Security.</em>
+          <strong>Columbia Journal of Asia</strong> (2023).
+          <a href="https://doi.org/10.52214/cja.v2i1.11113" target="_blank">DOI</a>
+        </li>
+      </ul>
 
-  <h3>Policy Reports</h3>
-  <ul>
-    <li>
-      <em>Fields on Fire: Policy Recommendations to Combat Stubble Burning.</em><br>
-      With Y. Lee & T. Kaiser.  
-      Entente Cordiale Day Association Policy Report (2025).
-    </li>
-  </ul>
+      <h3>Policy Reports</h3>
+      <ul>
+        <li>
+          <em>Fields on Fire: Policy Recommendations to Combat Stubble Burning.</em>
+          Entente Cordiale Day Association (2025).
+        </li>
+      </ul>
 
-  <h3>Working Papers</h3>
-  <ul>
-    <li>
-      <em>
-        Multi-dimensional Bias in Modelling Multi-dimensional Preferences:
-        Evaluating the Ability of Synthetic Agents to Replace Human Participants
-        in Conjoint Experiments.
-      </em><br>
-      With Ho Ting (Bosco) Hung and Yiwen Zhang.  
-      Working paper.
-    </li>
-  </ul>
+      <h3>Working Papers</h3>
+      <ul>
+        <li>
+          <em>Multi-dimensional Bias in Modelling Multi-dimensional Preferences.</em>
+          With Ho Ting (Bosco) Hung and Yiwen Zhang.
+        </li>
+      </ul>
 
-  <h3>Op-Eds & Commentary</h3>
-  <ul>
-    <li>
-      <strong>South China Morning Post</strong> (September 2025).  
-      “China’s 10-Year Industrial Plan: Paving the Way for Tech Greatness.”  
-      <a href="https://www.scmp.com/opinion/china-opinion/article/3324068/chinas-10-year-industrial-plan-paving-way-tech-greatness"
-         target="_blank">Article</a>
-    </li>
-
-    <li>
-      <strong>Institute of South Asian Studies (ISAS), National University of Singapore</strong> (June 2023).  
-      ISAS Brief No. 1032.  
-      <a href="https://www.isas.nus.edu.sg/wp-content/uploads/2023/06/ISAS-Brief-1032-.pdf"
-         target="_blank">PDF</a>
-    </li>
-
-    <li>
-      <strong>The Print</strong> (June 2022).  
-      “Egalitarian Uniform Civil Code: The Formulation by BJP Is the Concern, Not the UCC Itself.”  
-      <a href="https://theprint.in/campus-voice/egalitarian-uniform-civil-code-formulation-by-bjp-is-the-concern-not-ucc-itself/988124/"
-         target="_blank">Article</a>
-    </li>
-
-    <li>
-      <strong>Trivedi Centre for Political Data</strong> (June 2022).  
-      “How Competitive Are Punjab’s Assembly Elections? Here’s What ENOP Tells Us.”  
-      <a href="http://tcpd.ashoka.edu.in/how-competitive-are-punjabs-assembly-elections-heres-what-enop-tells-us/"
-         target="_blank">Article</a>
-    </li>
-
-    <li>
-      <strong>Centre for New Economic Studies (CNES)</strong>, Ashoka University (2021).  
-      Column series on political economy and inequality.  
-      <a href="https://nickledanddimed.com/?s=nachiket+midha"
-         target="_blank">Series archive</a>
-    </li>
-  </ul>
-</section>
-
+      <h3>Op-Eds & Commentary</h3>
+      <ul>
+        <li>
+          <strong>South China Morning Post</strong> (2025).
+          <a href="https://www.scmp.com/opinion/china-opinion/article/3324068/chinas-10-year-industrial-plan-paving-way-tech-greatness"
+             target="_blank">
+            China’s 10-Year Industrial Plan: Paving the Way for Tech Greatness
+          </a>
+        </li>
+        <li>
+          <strong>ISAS, National University of Singapore</strong> (2023).
+          <a href="https://www.isas.nus.edu.sg/wp-content/uploads/2023/06/ISAS-Brief-1032-.pdf"
+             target="_blank">ISAS Brief No. 1032 (PDF)</a>
+        </li>
+        <li>
+          <strong>The Print</strong> (2022).
+          <a href="https://theprint.in/campus-voice/egalitarian-uniform-civil-code-formulation-by-bjp-is-the-concern-not-ucc-itself/988124/"
+             target="_blank">Egalitarian Uniform Civil Code</a>
+        </li>
+        <li>
+          <strong>Trivedi Centre for Political Data</strong> (2022).
+          <a href="http://tcpd.ashoka.edu.in/how-competitive-are-punjabs-assembly-elections-heres-what-enop-tells-us/"
+             target="_blank">How Competitive Are Punjab’s Assembly Elections?</a>
+        </li>
+        <li>
+          <strong>Centre for New Economic Studies</strong> (2021).
+          <a href="https://nickledanddimed.com/?s=nachiket+midha"
+             target="_blank">Nickel & Dimed column series</a>
+        </li>
+      </ul>
+    </section>
 
     <footer>
       © Nachiket Midha
