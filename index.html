@@ -6,26 +6,23 @@
 <title>Nachiket Midha</title>
 
 <style>
-/* ===== BASE ===== */
+/* ===== FULL BACKGROUND ===== */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
   color: #222;
-  background: #ffffff;
 }
 
-/* ===== FADED BANNER ===== */
-.banner {
+body::before {
+  content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 260px;
+  inset: 0;
   background:
-    linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
-    url("assets/banner.jpg") center/cover no-repeat;
-  z-index: -1;
+    linear-gradient(rgba(255,255,255,0.92),
+                    rgba(255,255,255,0.92)),
+    url("assets/banner.jpg") center / cover no-repeat;
+  z-index: -2;
 }
 
 /* ===== LAYOUT ===== */
@@ -33,16 +30,19 @@ body {
   display: grid;
   grid-template-columns: 260px 1fr;
   max-width: 1200px;
-  margin: 220px auto 0 auto;
-  padding: 40px 20px;
+  margin: 60px auto;
+  padding: 0 20px;
   gap: 50px;
 }
 
-/* ===== SIDEBAR ===== */
+/* ===== SIDEBAR CARD ===== */
 .sidebar {
   position: sticky;
   top: 40px;
-  align-self: start;
+  background: #ffffff;
+  padding: 30px 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .avatar {
@@ -84,6 +84,14 @@ body {
   text-decoration: underline;
 }
 
+/* ===== MAIN CARD ===== */
+main {
+  background: #ffffff;
+  padding: 36px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
 /* ===== NAV ===== */
 nav {
   border-bottom: 1px solid #e0e0e0;
@@ -105,16 +113,16 @@ nav a.active {
 }
 
 /* ===== CONTENT ===== */
-main {
-  max-width: 780px;
-}
-
 section {
   display: none;
 }
 
 section.active {
   display: block;
+}
+
+section + section {
+  margin-top: 40px;
 }
 
 h2 {
@@ -146,8 +154,6 @@ footer {
 </head>
 
 <body>
-
-<div class="banner"></div>
 
 <div class="wrapper">
 
@@ -290,29 +296,31 @@ footer {
       <h3>Op-Eds & Commentary</h3>
       <ul>
         <li>
-          <strong>South China Morning Post</strong> (2025).
+          <strong>South China Morning Post</strong> (2025).  
           <a href="https://www.scmp.com/opinion/china-opinion/article/3324068/chinas-10-year-industrial-plan-paving-way-tech-greatness"
              target="_blank">
             China’s 10-Year Industrial Plan: Paving the Way for Tech Greatness
           </a>
         </li>
         <li>
-          <strong>ISAS, National University of Singapore</strong> (2023).
+          <strong>ISAS, National University of Singapore</strong> (2023).  
           <a href="https://www.isas.nus.edu.sg/wp-content/uploads/2023/06/ISAS-Brief-1032-.pdf"
              target="_blank">ISAS Brief No. 1032 (PDF)</a>
         </li>
         <li>
-          <strong>The Print</strong> (2022).
+          <strong>The Print</strong> (2022).  
           <a href="https://theprint.in/campus-voice/egalitarian-uniform-civil-code-formulation-by-bjp-is-the-concern-not-ucc-itself/988124/"
              target="_blank">Egalitarian Uniform Civil Code</a>
         </li>
         <li>
-          <strong>Trivedi Centre for Political Data</strong> (2022).
+          <strong>Trivedi Centre for Political Data</strong> (2022).  
           <a href="http://tcpd.ashoka.edu.in/how-competitive-are-punjabs-assembly-elections-heres-what-enop-tells-us/"
-             target="_blank">How Competitive Are Punjab’s Assembly Elections?</a>
+             target="_blank">
+            How Competitive Are Punjab’s Assembly Elections?
+          </a>
         </li>
         <li>
-          <strong>Centre for New Economic Studies</strong> (2021).
+          <strong>Centre for New Economic Studies</strong> (2021).  
           <a href="https://nickledanddimed.com/?s=nachiket+midha"
              target="_blank">Nickel & Dimed column series</a>
         </li>
