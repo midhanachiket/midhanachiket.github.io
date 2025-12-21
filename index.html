@@ -1,112 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nachiket Midha</title>
-  <style>
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #111;
-      background: #fff;
-    }
-    h1 {
-      font-size: 2.4em;
-      margin-bottom: 0;
-    }
-    h2 {
-      font-size: 1.4em;
-      margin-top: 40px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
-    }
-    h3 {
-      font-size: 1.05em;
-      margin-bottom: 2px;
-    }
-    .subtitle {
-      font-size: 1.05em;
-      color: #444;
-      margin-top: 5px;
-    }
-    ul {
-      margin-top: 8px;
-    }
-    li {
-      margin-bottom: 6px;
-    }
-    .meta {
-      font-style: italic;
-      color: #555;
-      font-size: 0.95em;
-    }
-    a {
-      color: #003366;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #555;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nachiket Midha</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #111;
+  background: #f9f9f9;
+}
+
+header {
+  background: linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.45)
+    ),
+    url("assets/banner.jpg") center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+header img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.6em;
+}
+
+header p {
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+nav {
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+h3 {
+  margin-bottom: 5px;
+}
+
+.meta {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 0.9em;
+}
+</style>
 </head>
 
 <body>
 
-<h1>Nachiket Midha</h1>
-<div class="subtitle">
-  MSc Politics, University of Oxford · Political Methodology · Technology & Public Policy
-</div>
+<header>
+  <img src="assets/profile.jpg" alt="Nachiket Midha">
+  <h1>Nachiket Midha</h1>
+  <p>
+    MSc Politics, University of Oxford<br>
+    Political Methodology · Technology & Public Policy
+  </p>
+</header>
 
+<nav>
+  <a href="#home">Home</a>
+  <a href="#academic">Academic</a>
+  <a href="#professional">Professional</a>
+  <a href="#publications">Publications</a>
+  <a href="#connect">Connect</a>
+</nav>
+
+<section id="home">
+<h2>Home</h2>
 <p>
-I am a researcher and analyst working at the intersection of political science,
-emerging technologies, and public policy. My work focuses on causal inference,
-political behaviour, and the societal risks posed by new technologies.
+I am a political science researcher working at the intersection of
+political methodology, emerging technologies, and public policy.
+My research focuses on causal inference, political behaviour,
+misinformation, and institutional decision-making across democracies.
 </p>
+</section>
 
+<section id="academic">
 <h2>Academic Experience</h2>
 
 <h3>University of Oxford</h3>
 <div class="meta">MSc in Politics (2024–2025)</div>
 <ul>
-  <li>Advanced training in statistics, causal inference, and comparative governance.</li>
-  <li>Dissertation on dynastic legacies and women’s political leadership.</li>
+  <li>Advanced coursework in statistics, causal inference, formal analysis, and comparative governance.</li>
+  <li>Dissertation on dynastic legacies and women’s access to executive office across democracies.</li>
+  <li>Winner, King Edward VII Prize (Entente Cordiale Challenge).</li>
 </ul>
 
 <h3>Oxford Computational Political Science Group</h3>
 <div class="meta">Co-Founder</div>
 <ul>
-  <li>Founded an Oxford-affiliated research network on computational political science.</li>
-  <li>Presented research on misinformation risks to Members of the European Parliament.</li>
+  <li>Built an Oxford-affiliated interdisciplinary research network.</li>
+  <li>Presented misinformation risk frameworks to Members of the European Parliament.</li>
+  <li>Led workshops on experiments, causal surveys, and LLM-based methods.</li>
 </ul>
 
+<h3>European Studies Centre, University of Oxford</h3>
+<div class="meta">Research Assistant</div>
+<ul>
+  <li>Produced policy briefs using public opinion and political speech data.</li>
+</ul>
+</section>
+
+<section id="professional">
 <h2>Professional Experience</h2>
 
 <h3>Prime Advocates, London</h3>
 <div class="meta">Analyst — ESG, Impact & Assurance</div>
 <ul>
-  <li>Produced ESG impact profiles and quantitative performance trackers.</li>
+  <li>Produced ESG impact profiles and performance trackers for advisory clients.</li>
+  <li>Evaluated carbon reporting and ESG assurance processes.</li>
 </ul>
 
+<h3>Oxford Strategy Group</h3>
+<div class="meta">Consultant</div>
+<ul>
+  <li>Delivered consulting reports analysing UK mobility and employer-side demand.</li>
+</ul>
+
+<h3>MayaCode Global</h3>
+<div class="meta">Business Development Associate</div>
+<ul>
+  <li>Built GenAI prototyping pipelines and supported B2G partnerships.</li>
+</ul>
+</section>
+
+<section id="publications">
 <h2>Publications & Writing</h2>
 <ul>
-  <li>Columbia Journal of Asia (2023)</li>
-  <li>Entente Cordiale Day Policy Report (2025)</li>
+  <li>
+    “Understanding Akhand Bharat in Terms of Ontological Security.”
+    <em>Columbia Journal of Asia</em> (2023).
+  </li>
+  <li>
+    <em>Fields on Fire: Policy Recommendations to Combat Stubble Burning</em>.
+    Entente Cordiale Day Report (2025).
+  </li>
+  <li>
+    Working Paper: Bias in Synthetic Agents for Conjoint Experiments.
+  </li>
 </ul>
+</section>
 
-<h2>Contact</h2>
+<section id="connect">
+<h2>Connect</h2>
 <p>
 Email: <a href="mailto:nachiketmidha@gmail.com">nachiketmidha@gmail.com</a><br>
-GitHub: <a href="https://github.com/nachiketmidha20">github.com/nachiketmidha20</a>
+GitHub: <a href="https://github.com/nachiketmidha20">github.com/nachiketmidha20</a><br>
+LinkedIn: add when ready
 </p>
+</section>
 
 <footer>
 © Nachiket Midha
@@ -114,4 +207,3 @@ GitHub: <a href="https://github.com/nachiketmidha20">github.com/nachiketmidha20<
 
 </body>
 </html>
-
