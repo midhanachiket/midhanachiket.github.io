@@ -8,184 +8,226 @@
 <style>
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  color: #111;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  color: #222;
   background: #ffffff;
 }
 
-/* LAYOUT */
-.container {
+/* ===== LAYOUT ===== */
+.wrapper {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 260px 1fr;
   max-width: 1200px;
-  margin: 60px auto;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 40px 20px;
   gap: 50px;
 }
 
-/* SIDEBAR */
+/* ===== SIDEBAR ===== */
 .sidebar {
   position: sticky;
   top: 40px;
   align-self: start;
 }
 
-.sidebar img {
-  width: 100%;
-  border-radius: 4px;
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 20px;
 }
 
 .sidebar h1 {
-  font-size: 1.8em;
-  margin-bottom: 8px;
+  font-size: 1.6em;
+  margin: 0 0 6px 0;
 }
 
-.sidebar p {
+.sidebar .role {
   font-size: 0.95em;
-  color: #444;
-  line-height: 1.4;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 8px;
+  font-size: 0.9em;
 }
 
 .sidebar a {
-  display: block;
-  margin-top: 8px;
-  color: #003366;
+  color: #0055aa;
   text-decoration: none;
-  font-size: 0.95em;
 }
 
 .sidebar a:hover {
   text-decoration: underline;
 }
 
-/* CONTENT */
-main section {
+/* ===== TOP NAV ===== */
+nav {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+  padding-bottom: 12px;
+}
+
+nav a {
+  margin-right: 18px;
+  font-size: 0.95em;
+  color: #333;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== CONTENT ===== */
+main {
+  max-width: 760px;
+}
+
+section {
   margin-bottom: 50px;
 }
 
-h2 {
-  font-size: 1.3em;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 4px;
-  margin-bottom: 15px;
+section h2 {
+  font-size: 1.4em;
+  margin-bottom: 14px;
 }
 
-h3 {
-  font-size: 1.05em;
-  margin-bottom: 4px;
-}
-
-.meta {
-  font-style: italic;
-  color: #555;
+p {
+  line-height: 1.6;
   font-size: 0.95em;
-  margin-bottom: 6px;
 }
 
 ul {
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 li {
   margin-bottom: 6px;
+  font-size: 0.95em;
 }
 
-a {
-  color: #003366;
+.pub-title {
+  font-style: italic;
 }
 
+/* ===== FOOTER ===== */
 footer {
-  font-size: 0.9em;
-  color: #666;
   margin-top: 80px;
+  font-size: 0.85em;
+  color: #777;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="wrapper">
 
-  <!-- SIDEBAR -->
+  <!-- ===== SIDEBAR ===== -->
   <aside class="sidebar">
-    <img src="assets/profile.jpg" alt="Nachiket Midha">
+    <img src="assets/profile.jpg" alt="Nachiket Midha" class="avatar">
 
     <h1>Nachiket Midha</h1>
-    <p>
+    <div class="role">
       MSc Politics<br>
-      University of Oxford<br>
-      Political Methodology · Technology & Public Policy
-    </p>
+      University of Oxford
+    </div>
 
-    <a href="assets/Nachiket_Midha_CV.pdf" target="_blank">Download CV (PDF)</a>
-    <a href="mailto:nachiketmidha@gmail.com">nachiketmidha@gmail.com</a>
-    <a href="https://github.com/nachiketmidha20">GitHub</a>
-    <a href="#">LinkedIn</a>
+    <ul>
+      <li>📍 Oxford, UK</li>
+      <li>📧 <a href="mailto:nachiketmidha@gmail.com">Email</a></li>
+      <li>🐙 <a href="https://github.com/nachiketmidha20">GitHub</a></li>
+      <li>🔗 <a href="#">LinkedIn</a></li>
+      <li>📄 <a href="assets/Nachiket_Midha_CV.pdf" target="_blank">CV (PDF)</a></li>
+    </ul>
   </aside>
 
-  <!-- MAIN CONTENT -->
+  <!-- ===== MAIN ===== -->
   <main>
 
-    <section>
-      <h2>About</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+    </nav>
+
+    <section id="about">
+      <h2>Welcome</h2>
       <p>
-        I am a political science researcher working at the intersection of political
-        methodology, emerging technologies, and public policy. My work focuses on
-        causal inference, political behaviour, misinformation, and institutional
-        decision-making in comparative perspective.
+        I am a political science researcher working at the intersection of
+        political methodology, emerging technologies, and public policy.
+        My research focuses on causal inference, political behaviour,
+        misinformation, and institutional decision-making in comparative
+        perspective.
+      </p>
+
+      <p>
+        I am currently completing an MSc in Politics at the University of Oxford.
       </p>
     </section>
 
-    <section>
-      <h2>Academic Experience</h2>
-
-      <h3>University of Oxford</h3>
-      <div class="meta">MSc in Politics (2024–2025)</div>
+    <section id="research">
+      <h2>Research Interests</h2>
       <ul>
-        <li>Advanced training in statistics, causal inference, formal analysis, and comparative governance.</li>
-        <li>Dissertation: <em>Yes, Madam Prime Minister: Dynastic Legacies and Women’s Ascension to Highest Offices</em>.</li>
-        <li>Winner, King Edward VII Prize (Entente Cordiale Challenge).</li>
-      </ul>
-
-      <h3>Oxford Computational Political Science Group</h3>
-      <div class="meta">Co-Founder</div>
-      <ul>
-        <li>Founded an Oxford-affiliated interdisciplinary research network.</li>
-        <li>Presented misinformation risk frameworks to Members of the European Parliament.</li>
+        <li>Causal inference and experimental methods</li>
+        <li>Political behaviour and misinformation</li>
+        <li>Institutions, leadership, and democratic governance</li>
+        <li>Synthetic agents and political decision-making</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Professional Experience</h2>
-
-      <h3>Prime Advocates, London</h3>
-      <div class="meta">Analyst — ESG, Impact & Assurance</div>
-      <ul>
-        <li>Produced ESG impact profiles and quantitative performance trackers.</li>
-      </ul>
-
-      <h3>Oxford Strategy Group</h3>
-      <div class="meta">Consultant</div>
-      <ul>
-        <li>Delivered consulting reports on UK mobility and labour-market demand.</li>
-      </ul>
-    </section>
-
-    <section>
+    <section id="publications">
       <h2>Publications & Writing</h2>
       <ul>
         <li>
-          “Understanding Akhand Bharat in Terms of Ontological Security.”
+          <span class="pub-title">
+            Understanding Akhand Bharat in Terms of Ontological Security
+          </span><br>
           <em>Columbia Journal of Asia</em> (2023).
           <a href="https://doi.org/10.52214/cja.v2i1.11113" target="_blank">DOI</a>
         </li>
+
         <li>
-          <em>Fields on Fire: Policy Recommendations to Combat Stubble Burning</em>
-          (Entente Cordiale Day Report, 2025).
+          <span class="pub-title">
+            Fields on Fire: Policy Recommendations to Combat Stubble Burning
+          </span><br>
+          Entente Cordiale Day Report (2025).
+        </li>
+
+        <li>
+          Working paper:
+          <span class="pub-title">
+            Evaluating Synthetic Agents in Conjoint Experiments
+          </span>.
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <strong>Oxford Computational Political Science Group</strong><br>
+          Co-Founder
         </li>
         <li>
-          Working Paper: <em>Evaluating Synthetic Agents in Conjoint Experiments</em>.
+          <strong>Prime Advocates (London)</strong><br>
+          Analyst — ESG, Impact & Assurance
+        </li>
+        <li>
+          <strong>Oxford Strategy Group</strong><br>
+          Consultant
         </li>
       </ul>
     </section>
