@@ -14,7 +14,6 @@ body {
   background: #ffffff;
 }
 
-/* ===== LAYOUT ===== */
 .wrapper {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -24,7 +23,7 @@ body {
   gap: 50px;
 }
 
-/* ===== SIDEBAR ===== */
+/* SIDEBAR */
 .sidebar {
   position: sticky;
   top: 40px;
@@ -70,7 +69,7 @@ body {
   text-decoration: underline;
 }
 
-/* ===== TOP NAV ===== */
+/* NAV */
 nav {
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 30px;
@@ -82,45 +81,46 @@ nav a {
   font-size: 0.95em;
   color: #333;
   text-decoration: none;
+  cursor: pointer;
 }
 
-nav a:hover {
+nav a.active {
+  font-weight: 600;
   text-decoration: underline;
 }
 
-/* ===== CONTENT ===== */
+/* CONTENT */
 main {
   max-width: 760px;
 }
 
 section {
-  margin-bottom: 50px;
+  display: none;
 }
 
-section h2 {
+section.active {
+  display: block;
+}
+
+h2 {
   font-size: 1.4em;
   margin-bottom: 14px;
 }
 
-p {
-  line-height: 1.6;
-  font-size: 0.95em;
+h3 {
+  margin-bottom: 4px;
 }
 
-ul {
-  margin-top: 8px;
-}
-
-li {
-  margin-bottom: 6px;
-  font-size: 0.95em;
-}
-
-.pub-title {
+.meta {
+  color: #555;
   font-style: italic;
+  font-size: 0.95em;
 }
 
-/* ===== FOOTER ===== */
+ul li {
+  margin-bottom: 6px;
+}
+
 footer {
   margin-top: 80px;
   font-size: 0.85em;
@@ -133,7 +133,7 @@ footer {
 
 <div class="wrapper">
 
-  <!-- ===== SIDEBAR ===== -->
+  <!-- SIDEBAR -->
   <aside class="sidebar">
     <img src="assets/profile.jpg" alt="Nachiket Midha" class="avatar">
 
@@ -152,92 +152,21 @@ footer {
     </ul>
   </aside>
 
-  <!-- ===== MAIN ===== -->
+  <!-- MAIN -->
   <main>
 
     <nav>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#experience">Experience</a>
+      <a onclick="showTab('about')" class="active">About</a>
+      <a onclick="showTab('research')">Research</a>
+      <a onclick="showTab('ocpsg')">OCPSG</a>
+      <a onclick="showTab('experience')">Experience</a>
+      <a onclick="showTab('publications')">Publications</a>
     </nav>
 
-    <section id="about">
+    <!-- ABOUT -->
+    <section id="about" class="active">
       <h2>Welcome</h2>
       <p>
-        I am a political science researcher working at the intersection of
-        political methodology, emerging technologies, and public policy.
-        My research focuses on causal inference, political behaviour,
-        misinformation, and institutional decision-making in comparative
-        perspective.
-      </p>
-
-      <p>
-        I am currently completing an MSc in Politics at the University of Oxford.
-      </p>
-    </section>
-
-    <section id="research">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Causal inference and experimental methods</li>
-        <li>Political behaviour and misinformation</li>
-        <li>Institutions, leadership, and democratic governance</li>
-        <li>Synthetic agents and political decision-making</li>
-      </ul>
-    </section>
-
-    <section id="publications">
-      <h2>Publications & Writing</h2>
-      <ul>
-        <li>
-          <span class="pub-title">
-            Understanding Akhand Bharat in Terms of Ontological Security
-          </span><br>
-          <em>Columbia Journal of Asia</em> (2023).
-          <a href="https://doi.org/10.52214/cja.v2i1.11113" target="_blank">DOI</a>
-        </li>
-
-        <li>
-          <span class="pub-title">
-            Fields on Fire: Policy Recommendations to Combat Stubble Burning
-          </span><br>
-          Entente Cordiale Day Report (2025).
-        </li>
-
-        <li>
-          Working paper:
-          <span class="pub-title">
-            Evaluating Synthetic Agents in Conjoint Experiments
-          </span>.
-        </li>
-      </ul>
-    </section>
-
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <li>
-          <strong>Oxford Computational Political Science Group</strong><br>
-          Co-Founder
-        </li>
-        <li>
-          <strong>Prime Advocates (London)</strong><br>
-          Analyst — ESG, Impact & Assurance
-        </li>
-        <li>
-          <strong>Oxford Strategy Group</strong><br>
-          Consultant
-        </li>
-      </ul>
-    </section>
-
-    <footer>
-      © Nachiket Midha
-    </footer>
-
-  </main>
-</div>
-
-</body>
-</html>
+        I am a political science researcher working at the intersection of political
+        methodology, emerging technologies, and public policy. My work focuses on
+        causal inference, political behaviour, misinformation, and institutional
