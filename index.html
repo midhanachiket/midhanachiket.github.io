@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nachiket Midha</title>
 
+<!-- FAVICON -->
+<link rel="icon" type="image/jpeg" href="assets/profile.jpg">
+
 <style>
 /* ===== FULL BACKGROUND ===== */
 body {
@@ -35,7 +38,7 @@ body::before {
   gap: 50px;
 }
 
-/* ===== SIDEBAR CARD ===== */
+/* ===== SIDEBAR ===== */
 .sidebar {
   position: sticky;
   top: 40px;
@@ -84,7 +87,7 @@ body::before {
   text-decoration: underline;
 }
 
-/* ===== MAIN CARD ===== */
+/* ===== MAIN ===== */
 main {
   background: #ffffff;
   padding: 36px 40px;
@@ -113,17 +116,10 @@ nav a.active {
 }
 
 /* ===== CONTENT ===== */
-section {
-  display: none;
-}
+section { display: none; }
+section.active { display: block; }
 
-section.active {
-  display: block;
-}
-
-section + section {
-  margin-top: 40px;
-}
+section + section { margin-top: 40px; }
 
 h2 {
   font-size: 1.4em;
@@ -132,12 +128,12 @@ h2 {
 
 h3 {
   margin-top: 24px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .meta {
-  color: #555;
   font-style: italic;
+  color: #555;
   font-size: 0.95em;
 }
 
@@ -157,188 +153,140 @@ footer {
 
 <div class="wrapper">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <img src="assets/profile.jpg" alt="Nachiket Midha" class="avatar">
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <img src="assets/profile.jpg" alt="Nachiket Midha" class="avatar">
 
-    <h1>Nachiket Midha</h1>
-    <div class="role">
-      MSc Politics<br>
-      University of Oxford
-    </div>
+  <h1>Nachiket Midha</h1>
+  <div class="role">
+    MSc Politics (2024–2025)<br>
+    University of Oxford
+  </div>
 
-    <ul>
-      <li>📍 Oxford, UK</li>
-      <li>📧 <a href="mailto:nachiketmidha@gmail.com">Email</a></li>
-      <li>🐙 <a href="https://github.com/nachiketmidha20">GitHub</a></li>
-      <li>🔗 <a href="#">LinkedIn</a></li>
-      <li>📄 <a href="assets/Nachiket_Midha_CV.pdf" target="_blank">CV (PDF)</a></li>
-    </ul>
-  </aside>
+  <ul>
+    <li>📍 Oxford, UK</li>
+    <li>📧 <a href="mailto:nachiket.midha@politics.ox.ac.uk">Oxford Email</a></li>
+    <li>📧 <a href="mailto:nachiketmidha@gmail.com">Personal Email</a></li>
+    <li>🔗 <a href="https://www.linkedin.com/in/nachiketmidha/">LinkedIn</a></li>
+    <li>𝕏 <a href="https://x.com/midhanachiket?lang=en">X (Twitter)</a></li>
+    <li>🐙 <a href="https://github.com/nachiketmidha20">GitHub</a></li>
+    <li>📄 <a href="assets/Nachiket_Midha_CV.pdf" target="_blank">CV (PDF)</a></li>
+  </ul>
+</aside>
 
-  <!-- MAIN -->
-  <main>
+<!-- MAIN -->
+<main>
 
-    <nav>
-      <a onclick="showTab('about', this)" class="active">About</a>
-      <a onclick="showTab('research', this)">Research</a>
-      <a onclick="showTab('ocpsg', this)">OCPSG</a>
-      <a onclick="showTab('experience', this)">Experience</a>
-      <a onclick="showTab('publications', this)">Publications</a>
-    </nav>
+<nav>
+  <a onclick="showTab('about', this)" class="active">About</a>
+  <a onclick="showTab('research', this)">Research</a>
+  <a onclick="showTab('ocpsg', this)">OCPSG</a>
+  <a onclick="showTab('experience', this)">Industry</a>
+  <a onclick="showTab('publications', this)">Publications</a>
+  <a onclick="showTab('awards', this)">Awards</a>
+  <a onclick="showTab('skills', this)">Skills</a>
+</nav>
 
-    <!-- ABOUT -->
-    <section id="about" class="active">
-      <h2>About</h2>
-      <p>
-        I am a political science researcher working at the intersection of political
-        methodology, emerging technologies, and public policy. My work focuses on
-        causal inference, political behaviour, misinformation, and institutional
-        decision-making in comparative perspective.
-      </p>
-      <p>
-        I am currently completing an MSc in Politics at the University of Oxford.
-      </p>
-    </section>
+<section id="about" class="active">
+  <h2>About</h2>
+  <p>
+    I am a political science researcher trained in political methodology, causal inference,
+    and comparative governance. My work sits at the intersection of emerging technologies,
+    political behaviour, and public policy, with a focus on misinformation, leadership,
+    and institutional decision-making across democracies.
+  </p>
+</section>
 
-    <!-- RESEARCH -->
-    <section id="research">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Causal inference and experimental methods</li>
-        <li>Political behaviour, misinformation, and disinformation</li>
-        <li>Institutions, leadership, and democratic governance</li>
-        <li>Synthetic agents and political decision-making</li>
-      </ul>
-    </section>
+<section id="research">
+  <h2>Research Experience</h2>
 
-    <!-- OCPSG -->
-    <section id="ocpsg">
-      <h2>Oxford Computational Political Science Group (OCPSG)</h2>
-      <p class="meta">Co-Founder</p>
-      <p>
-        I co-founded the
-        <a href="https://www.politics.ox.ac.uk/oxford-computational-political-science-group"
-           target="_blank">
-          Oxford Computational Political Science Group
-        </a>,
-        an Oxford-affiliated interdisciplinary research network focused on
-        computational methods, political behaviour, and emerging technologies.
-      </p>
-      <ul>
-        <li>Expanded funding capacity and launched multiple research and policy programmes.</li>
-        <li>Designed and presented misinformation risk frameworks to Members of the European Parliament.</li>
-        <li>Organised quantitative workshops on experiments, causal surveys, and LLM-based methods.</li>
-        <li>Leading research on technological exposure and democratic resilience among EU youth.</li>
-      </ul>
-    </section>
+  <h3>Oxford Computational Political Science Group</h3>
+  <p class="meta">Co-Founder · Oxford (Dec 2024 – Present)</p>
 
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <h2>Experience</h2>
+  <h3>European Studies Centre, University of Oxford</h3>
+  <p class="meta">Research Assistant (May 2025 – Sep 2025)</p>
 
-      <h3>European Studies Centre, University of Oxford</h3>
-      <p class="meta">Research Assistant</p>
-      <ul>
-        <li>Produced policy briefs integrating public opinion and political speech data.</li>
-        <li>Analysed large-scale survey data across the UK and EU.</li>
-      </ul>
+  <h3>Centre for Policy Research, New Delhi</h3>
+  <p class="meta">Research Associate (Jan 2023 – May 2024)</p>
 
-      <h3>Prime Advocates, London</h3>
-      <p class="meta">Analyst — ESG, Impact & Assurance</p>
-      <ul>
-        <li>Produced ESG impact profiles and quantitative performance trackers.</li>
-        <li>Evaluated carbon reporting and ESG assurance processes.</li>
-      </ul>
+  <h3>ISAS – National University of Singapore</h3>
+  <p class="meta">Research Intern (Jun 2023 – Aug 2023)</p>
 
-      <h3>Oxford Strategy Group</h3>
-      <p class="meta">Consultant</p>
-      <ul>
-        <li>Delivered consulting reports on UK mobility schemes and labour-market demand.</li>
-      </ul>
+  <h3>International Centre of Advanced Studies, New Delhi</h3>
+  <p class="meta">Researcher / Liaison (Jul 2023 – Aug 2023)</p>
 
-      <h3>ISAS – National University of Singapore</h3>
-      <p class="meta">Research Intern</p>
-      <ul>
-        <li>Worked on supply chains, trade policy, AI, and Indo-Pacific geopolitics.</li>
-      </ul>
-    </section>
+  <h3>Entente Cordiale Day Association</h3>
+  <p class="meta">Policy Apprentice (Nov 2024 – Jun 2025)</p>
+</section>
 
-    <!-- PUBLICATIONS -->
-    <section id="publications">
-      <h2>Publications & Writing</h2>
+<section id="ocpsg">
+  <h2>Oxford Computational Political Science Group (OCPSG)</h2>
+  <p class="meta">Co-Founder</p>
+  <p>
+    I co-founded the
+    <a href="https://www.politics.ox.ac.uk/oxford-computational-political-science-group" target="_blank">
+      Oxford Computational Political Science Group
+    </a>,
+    an Oxford-affiliated interdisciplinary research network focused on computational
+    political science and public-policy applications.
+  </p>
+</section>
 
-      <h3>Peer-Reviewed Research</h3>
-      <ul>
-        <li>
-          <em>Understanding Akhand Bharat in Terms of Ontological Security.</em>
-          <strong>Columbia Journal of Asia</strong> (2023).
-          <a href="https://doi.org/10.52214/cja.v2i1.11113" target="_blank">DOI</a>
-        </li>
-      </ul>
+<section id="experience">
+  <h2>Industry & Consulting Experience</h2>
 
-      <h3>Policy Reports</h3>
-      <ul>
-        <li>
-          <em>Fields on Fire: Policy Recommendations to Combat Stubble Burning.</em>
-          Entente Cordiale Day Association (2025).
-        </li>
-      </ul>
+  <h3>Prime Advocates, London</h3>
+  <p class="meta">Part-time Analyst — ESG, Impact & Assurance (Aug 2025 – Present)</p>
 
-      <h3>Working Papers</h3>
-      <ul>
-        <li>
-          <em>Multi-dimensional Bias in Modelling Multi-dimensional Preferences.</em>
-          With Ho Ting (Bosco) Hung and Yiwen Zhang.
-        </li>
-      </ul>
+  <h3>Oxford Strategy Group, Oxford</h3>
+  <p class="meta">Consultant (Apr 2025 – Jun 2025)</p>
 
-      <h3>Op-Eds & Commentary</h3>
-      <ul>
-        <li>
-          <strong>South China Morning Post</strong> (2025).  
-          <a href="https://www.scmp.com/opinion/china-opinion/article/3324068/chinas-10-year-industrial-plan-paving-way-tech-greatness"
-             target="_blank">
-            China’s 10-Year Industrial Plan: Paving the Way for Tech Greatness
-          </a>
-        </li>
-        <li>
-          <strong>ISAS, National University of Singapore</strong> (2023).  
-          <a href="https://www.isas.nus.edu.sg/wp-content/uploads/2023/06/ISAS-Brief-1032-.pdf"
-             target="_blank">ISAS Brief No. 1032 (PDF)</a>
-        </li>
-        <li>
-          <strong>The Print</strong> (2022).  
-          <a href="https://theprint.in/campus-voice/egalitarian-uniform-civil-code-formulation-by-bjp-is-the-concern-not-ucc-itself/988124/"
-             target="_blank">Egalitarian Uniform Civil Code</a>
-        </li>
-        <li>
-          <strong>Trivedi Centre for Political Data</strong> (2022).  
-          <a href="http://tcpd.ashoka.edu.in/how-competitive-are-punjabs-assembly-elections-heres-what-enop-tells-us/"
-             target="_blank">
-            How Competitive Are Punjab’s Assembly Elections?
-          </a>
-        </li>
-        <li>
-          <strong>Centre for New Economic Studies</strong> (2021).  
-          <a href="https://nickledanddimed.com/?s=nachiket+midha"
-             target="_blank">Nickel & Dimed column series</a>
-        </li>
-      </ul>
-    </section>
+  <h3>MayaCode Global (UK / Germany)</h3>
+  <p class="meta">Business Development Associate (Mar 2025 – Jun 2025)</p>
+</section>
 
-    <footer>
-      © Nachiket Midha
-    </footer>
+<section id="publications">
+  <h2>Publications & Writing</h2>
 
-  </main>
+  <ul>
+    <li><em>Understanding Akhand Bharat in Terms of Ontological Security.</em> Columbia Journal of Asia (2023).</li>
+    <li><em>Fields on Fire: Policy Recommendations to Combat Stubble Burning.</em> Entente Cordiale Day Report (2025).</li>
+    <li>Working Paper: Multi-dimensional Bias in Modelling Multi-dimensional Preferences.</li>
+    <li>South China Morning Post (2025) · ISAS (2023) · The Print (2022) · TCPD (2022) · CNES (2021)</li>
+  </ul>
+</section>
+
+<section id="awards">
+  <h2>Awards & Fellowships</h2>
+
+  <ul>
+    <li>King Edward VII Prize Winner – Entente Cordiale Day (2025)</li>
+    <li>Swami Vivekananda Scholarship – Government of Rajasthan</li>
+    <li>Oxford–Cambridge Society of India Scholarship</li>
+    <li>FURHHDL Fellowship – Dharamshala (2024)</li>
+    <li>Emile Boutmy Scholarship, Sciences Po (Declined)</li>
+  </ul>
+</section>
+
+<section id="skills">
+  <h2>Skills & Interests</h2>
+
+  <ul>
+    <li><strong>Methods:</strong> R, Python, LaTeX, Econometrics, Causal Inference</li>
+    <li><strong>Languages:</strong> English, Hindi, Punjabi; Spanish & Mandarin (basic)</li>
+    <li><strong>Interests:</strong> Teaching, public speaking, event management, fiction writing</li>
+  </ul>
+</section>
+
+<footer>© Nachiket Midha</footer>
+
+</main>
 </div>
 
 <script>
 function showTab(id, el) {
   document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
   document.getElementById(id).classList.add("active");
-
   document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
   el.classList.add("active");
 }
