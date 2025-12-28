@@ -5,66 +5,74 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nachiket Midha</title>
 
-<!-- FAVICON -->
-<link rel="icon" type="image/jpeg" href="assets/profile.jpg">
+<!-- FAVICON: NM white on green circle -->
+<link rel="icon" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<circle cx='50' cy='50' r='50' fill='%231f7a4f'/>
+<text x='50%' y='58%' text-anchor='middle'
+fill='white' font-size='42' font-family='Georgia'>NM</text>
+</svg>">
 
 <style>
-/* ===== FULL BACKGROUND ===== */
+
+/* ================= GLOBAL ================= */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #222;
 }
 
+/* Background banner */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background:
-    linear-gradient(rgba(255,255,255,0.80),
-                    rgba(255,255,255,0.80)),
+    linear-gradient(rgba(255,255,255,0.88),
+                    rgba(255,255,255,0.88)),
     url("assets/banner.jpg") center / cover no-repeat;
   z-index: -2;
 }
 
-/* ===== LAYOUT ===== */
+/* ================= LAYOUT ================= */
 .wrapper {
   display: grid;
   grid-template-columns: 260px 1fr;
   max-width: 1200px;
-  margin: 60px auto;
-  padding: 0 20px;
-  gap: 50px;
+  margin: 70px auto;
+  padding: 0 24px;
+  gap: 60px;
 }
 
-/* ===== SIDEBAR ===== */
+/* ================= SIDEBAR ================= */
 .sidebar {
   position: sticky;
   top: 40px;
-  background: #ffffff;
-  padding: 30px 28px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  background: transparent;
+  padding: 10px 0;
 }
 
 .avatar {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  border: 2px solid #eee;
 }
 
 .sidebar h1 {
-  font-size: 1.6em;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.7em;
   margin: 0 0 6px 0;
 }
 
 .sidebar .role {
   font-size: 0.95em;
   color: #555;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  line-height: 1.4;
 }
 
 .sidebar ul {
@@ -79,7 +87,7 @@ body::before {
 }
 
 .sidebar a {
-  color: #0055aa;
+  color: #1f4ed8;
   text-decoration: none;
 }
 
@@ -87,23 +95,23 @@ body::before {
   text-decoration: underline;
 }
 
-/* ===== MAIN ===== */
+/* ================= MAIN ================= */
 main {
-  background: #ffffff;
-  padding: 36px 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.96);
+  padding: 40px 52px;
+  border-radius: 6px;
 }
 
-/* ===== NAV ===== */
+/* ================= NAV ================= */
 nav {
-  border-bottom: 1px solid #e0e0e0;
-  margin-bottom: 30px;
-  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 36px;
+  padding-bottom: 10px;
 }
 
 nav a {
-  margin-right: 18px;
+  margin-right: 22px;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 0.95em;
   color: #333;
   text-decoration: none;
@@ -112,33 +120,45 @@ nav a {
 
 nav a.active {
   font-weight: 600;
-  text-decoration: underline;
+  border-bottom: 2px solid #333;
+  padding-bottom: 2px;
 }
 
-/* ===== CONTENT ===== */
-section { display: none; }
-section.active { display: block; }
+/* ================= CONTENT ================= */
+section {
+  display: none;
+  max-width: 780px;
+}
 
-section + section { margin-top: 40px; }
+section.active {
+  display: block;
+}
 
 h2 {
-  font-size: 1.4em;
-  margin-bottom: 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45em;
+  margin-bottom: 16px;
 }
 
 h3 {
-  margin-top: 24px;
-  margin-bottom: 4px;
+  font-family: Georgia, "Times New Roman", serif;
+  margin-top: 26px;
+  margin-bottom: 6px;
+}
+
+p {
+  line-height: 1.65;
 }
 
 .meta {
   font-style: italic;
   color: #555;
   font-size: 0.95em;
+  margin-bottom: 8px;
 }
 
 ul li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 footer {
@@ -146,6 +166,7 @@ footer {
   font-size: 0.85em;
   color: #777;
 }
+
 </style>
 </head>
 
@@ -153,31 +174,31 @@ footer {
 
 <div class="wrapper">
 
-<!-- SIDEBAR -->
+<!-- ========== SIDEBAR ========== -->
 <aside class="sidebar">
   <img src="assets/profile.jpg" alt="Nachiket Midha" class="avatar">
 
   <h1>Nachiket Midha</h1>
+
   <div class="role">
     MSc Politics (2024–2025)<br>
-    University of Oxford, UK<br>
-    <br>
-    BA (Hons) & PGDip, Political Science (2020-2024)<br>
+    University of Oxford, UK<br><br>
+    BA (Hons) & PGDip, Political Science (2020–2024)<br>
     Ashoka University, India
   </div>
 
   <ul>
     <li>📍 Oxford, UK</li>
-    <li>📧<a href="mailto:nachiket.midha@politics.ox.ac.uk">nachiket.midha@politics.ox.ac.uk</a></li>
-    <li>📧<a href="mailto:nachiketmidha@gmail.com">nachiketmidha@gmail.com</a></li>
+    <li>📧 <a href="mailto:nachiket.midha@politics.ox.ac.uk">nachiket.midha@politics.ox.ac.uk</a></li>
+    <li>📧 <a href="mailto:nachiketmidha@gmail.com">nachiketmidha@gmail.com</a></li>
     <li>🔗 <a href="https://www.linkedin.com/in/nachiketmidha/">LinkedIn</a></li>
     <li>𝕏 <a href="https://x.com/midhanachiket?lang=en">X (Twitter)</a></li>
     <li>🐙 <a href="https://github.com/nachiketmidha20">GitHub</a></li>
-    <li>📄 <a href="assets/Nachiket _Midha_CV_AI.pdf">CV (PDF)</a></li>
+    <li>📄 <a href="assets/Nachiket_Midha_CV_AI.pdf">CV (PDF)</a></li>
   </ul>
 </aside>
 
-<!-- MAIN -->
+<!-- ========== MAIN ========== -->
 <main>
 
 <nav>
@@ -266,17 +287,12 @@ footer {
   <ul>
     <li>
       <em>Fields on Fire: Policy Recommendations to Combat Stubble Burning.</em><br>
-      Entente Cordiale Day Association, Policy Report (2025). 
+      Entente Cordiale Day Association (2025).
     </li>
-
     <li>
       <em>Democratic Deficits and Pro-LGBTQ Legislations.</em><br>
-      Institute of South Asian Studies (ISAS), National University of Singapore,
-      ISAS Brief No. 1032 (2023).<br>
-      <a href="https://www.isas.nus.edu.sg/wp-content/uploads/2023/06/ISAS-Brief-1032-.pdf"
-         target="_blank">
-        PDF
-      </a>
+      ISAS, National University of Singapore (2023).<br>
+      <a href="https://www.isas.nus.edu.sg/wp-content/uploads/2023/06/ISAS-Brief-1032-.pdf" target="_blank">PDF</a>
     </li>
   </ul>
 
@@ -284,17 +300,15 @@ footer {
   <ul>
     <li>
       <em>Multi-Dimensional Bias in Modelling Multi-Dimensional Preferences.</em><br>
-      Working paper with Ho Ting (Bosco) Hung and Yiwen Zhang (2025).
+      With Ho Ting (Bosco) Hung and Yiwen Zhang (2025).
     </li>
   </ul>
 
   <h3>Op-Eds & Commentary</h3>
   <ul>
-    <li>
-      <strong>South China Morning Post</strong> (Sep 2025).<br>
-      <a href="https://www.scmp.com/opinion/china-opinion/article/3324068/chinas-10-year-industrial-plan-paving-way-tech-greatness"
-         target="_blank">
-        China’s 10-Year Industrial Plan: Paving the Way for Tech Greatness
+    <li><strong>South China Morning Post</strong> (2025) –
+      <a href="https://www.scmp.com/opinion/china-opinion/article/3324068/chinas-10-year-industrial-plan-paving-way-tech-greatness" target="_blank">
+        China’s 10-Year Industrial Plan
       </a>
     </li>
     <li>
@@ -304,37 +318,28 @@ footer {
         BRICS, China, and the Next White House
       </a>
     </li>
-    <li>
-      <strong>The Print</strong> (Jun 2022).<br>
-      <a href="https://theprint.in/campus-voice/egalitarian-uniform-civil-code-formulation-by-bjp-is-the-concern-not-ucc-itself/988124/"
-         target="_blank">
-        Egalitarian Uniform Civil Code: The Concern Is Not the UCC Itself
+    <li><strong>The Print</strong> (2022) –
+      <a href="https://theprint.in/campus-voice/egalitarian-uniform-civil-code-formulation-by-bjp-is-the-concern-not-ucc-itself/988124/" target="_blank">
+        Egalitarian Uniform Civil Code
       </a>
     </li>
-    <li>
-      <strong>Trivedi Centre for Political Data, Ashoka University</strong> (Jun 2022).<br>
-      <a href="http://tcpd.ashoka.edu.in/how-competitive-are-punjabs-assembly-elections-heres-what-enop-tells-us/"
-         target="_blank">
-        How Competitive Are Punjab’s Assembly Elections? What ENOP Tells Us
+    <li><strong>Trivedi Centre for Political Data</strong> (2022) –
+      <a href="http://tcpd.ashoka.edu.in/how-competitive-are-punjabs-assembly-elections-heres-what-enop-tells-us/" target="_blank">
+        Punjab Assembly Elections
       </a>
     </li>
-    <li>
-      <strong>Nickel & Dimed (Centre for New Economic Studies)</strong> (2021–2022).<br>
-      Series of columns on political economy, public policy, and development.<br>
-      <a href="https://nickledanddimed.com/?s=nachiket+midha"
-         target="_blank">
-        Author archive
+    <li><strong>Nickel & Dimed</strong> (2021–2022) –
+      <a href="https://nickledanddimed.com/?s=nachiket+midha" target="_blank">
+        Column archive
       </a>
     </li>
   </ul>
 </section>
 
-
 <section id="awards">
   <h2>Awards & Fellowships</h2>
-
   <ul>
-    <li>King Edward VII Prize Winner – Entente Cordiale Day (2025)</li>
+    <li>King Edward VII Prize – Entente Cordiale Day (2025)</li>
     <li>Swami Vivekananda Scholarship – Government of Rajasthan</li>
     <li>Oxford–Cambridge Society of India Scholarship</li>
     <li>FURHHDL Fellowship – Dharamshala (2024)</li>
@@ -344,7 +349,6 @@ footer {
 
 <section id="skills">
   <h2>Skills & Interests</h2>
-
   <ul>
     <li><strong>Methods:</strong> R, Python, LaTeX, Econometrics, Causal Inference</li>
     <li><strong>Languages:</strong> English, Hindi, Punjabi; Spanish & Mandarin (basic)</li>
