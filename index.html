@@ -167,6 +167,50 @@ footer {
   color: #777;
 }
 
+/* ===== OCPSG IMAGE GALLERY ===== */
+.ocpsg-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 22px;
+  margin-top: 30px;
+  align-items: start;
+}
+
+.ocpsg-gallery figure {
+  margin: 0;
+  text-align: center;
+}
+
+.ocpsg-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.ocpsg-gallery figure.logo img {
+  max-width: 160px;
+  margin: 0 auto;
+  box-shadow: none;
+}
+
+.ocpsg-gallery figcaption {
+  margin-top: 8px;
+  font-size: 0.85em;
+  color: #555;
+  line-height: 1.35;
+}
+
+/* Mobile-friendly */
+@media (max-width: 900px) {
+  .ocpsg-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .ocpsg-gallery figure.logo img {
+    max-width: 140px;
+  }
+}
+  
 </style>
 </head>
 
@@ -262,8 +306,31 @@ footer {
     OCPSG empowers students and researchers to explore innovative solutions to complex political questions.
   </p>
   <p>
-    General enquiries: ocpsg@politics.ox.ac.uk.
+    General enquiries: <a href="mailto:ocpsg@politics.ox.ac.uk">ocpsg@politics.ox.ac.uk</a>
   <p> 
+    <!-- OCPSG IMAGE ROW -->
+<div class="ocpsg-gallery">
+  <figure>
+    <img src="assets/Policy.jpg" alt="Policy engagement with EU Parliamentarians">
+    <figcaption>
+      Policy engagement with EU Parliamentarians for our work on
+      Misinformation & Disinformation
+    </figcaption>
+  </figure>
+
+  <figure class="logo">
+    <img src="assets/logo.jpg" alt="OCPSG logo">
+    <figcaption>Oxford Computational Political Science Group</figcaption>
+  </figure>
+
+  <figure>
+    <img src="assets/Talk.jpg" alt="Talk by Kosuke Imai at OCPSG">
+    <figcaption>
+      Talks and Workshops at OCPSG
+    </figcaption>
+  </figure>
+</div>
+
 </section>
 
 <section id="experience">
